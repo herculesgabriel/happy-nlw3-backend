@@ -14,6 +14,7 @@ export default {
 
   async show(request: Request, response: Response) {
     const { id } = request.params;
+    
     const orphanagesRepository = getRepository(Orphanages);
 
     const orphanage = await orphanagesRepository.findOneOrFail(id);
